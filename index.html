@@ -1,91 +1,145 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jessy Breyne - Portfolio</title>
-    <style>
-      html {
-        padding: 0;
-        margin: 0;
-        background-color: #000;
-      }
-      body {
-        font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: calc(10px + 0.33vw);
-        -webkit-font-smoothing: antialiased;
-        padding: 5vh 10vw;
-        margin: 0;
-        color: #f0f0f0;
-      }
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jessy Breyne - Portfolio</title>
+  <style>
+    html {
+      padding: 0;
+      margin: 0;
+      background-color: #000;
+    }
+  
+    body {
+      font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: calc(10px + 0.33vw);
+      -webkit-font-smoothing: antialiased;
+      padding: 5vh 10vw;
+      margin: 0;
+      color: #f0f0f0;
+    }
+  
+    main {
+      display: grid;
+      grid-template-areas:
+        "title title"
+        "p1 p2"
+        "p3 p3";
+      grid-template-columns: 1fr 1fr;
+      row-gap: 2em;
+      column-gap: 10em;
+    }
+  
+    h1 {
+      font-size: 4.5em;
+      font-weight: 500;
+      margin-bottom: 0;
+      grid-area: title;
+      /* positionne le titre en haut */
+    }
+  
+  
+    p {
+      font-size: 1.6em;
+      font-weight: 300;
+      line-height: 1.4;
+      text-align: justify;
+    }
+  
+    a {
+      text-decoration: none;
+      border-radius: 0.1rem;
+      color: #e5e5e5;
+      background: #474747;
+      transition: all 0.5s ease;
+    }
+  
+    a:hover {
+      color: #ededed;
+      background: #656565;
+    }
+  
+    p:first-letter {
+      float: left;
+      font-family: "Montagu Slab", serif;
+      font-size: 7rem;
+      line-height: 1;
+      margin-right: 0.5rem;
+    }
+  
+    p:nth-child(2) {
+      grid-area: p1;
+    }
+  
+    p:nth-child(3) {
+      grid-area: p2;
+    }
+  
+    p:nth-child(4) {
+      grid-area: p3;
+      grid-column: span 2;
+      /* le paragraphe 3 s'étend sur deux colonnes */
+    }
+  
+    @media (max-width: 100em) {
       main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10em;
+        grid-template-areas:
+          "title"
+          "p1"
+          "p2"
+          "p3";
+        grid-template-columns: 1fr;
+        gap: 1em;
       }
-      h1 {
-        font-size: 4.5em;
-        font-weight: 500;
-        margin-bottom: 0;
+  
+      body {
+        padding: 4vh 10vw;
       }
-      p {
-        font-size: 1.6em;
-        font-weight: 300;
-        line-height: 1.4;
-        text-align: justify;
+    }
+  
+    @media (max-width: 60em) {
+      main {
+        grid-template-areas:
+          "title"
+          "p1"
+          "p2"
+          "p3";
+        grid-template-columns: 1fr;
+        gap: 1em;
       }
-      a {
-        text-decoration: none;
-        border-radius: 0.1rem;
-        color: #e5e5e5;
-        background: #474747;
-        transition: all 0.5s ease;
+  
+      body {
+        padding: 1rem;
       }
-      a:hover {
-        color: #ededed;
-        background: #656565;
-      }
-      p:first-letter {
-        float: left;
-        font-family: "Montagu Slab", serif;
-        font-size: 8rem;
-        line-height: 1;
-        margin-right: 0.5rem;
-      }
-      @media (max-width: 100em) {
-        main {
-          grid-template-columns: 1fr;
-          gap: 1em;
-        }
-        body {
-          padding: 4vh 10vw;
-        }
-      }
-      @media (max-width: 60em) {
-        main {
-          grid-template-columns: 1fr;
-          gap: 1em;
-        }
-        body {
-          padding: 1rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-<main>
-    <section>
-        <h1>Jessy Breyne</h1>
-        <p>Avec une expérience en tant que Développeur Web Full-Stack, je me consacre actuellement au développement back-end chez Dassault Systèmes. Mon parcours m'a permis de maîtriser un éventail de technologies, et je poursuis constamment l'apprentissage de nouveaux outils. Je vous invite à découvrir mes projets sur <a href="https://github.com/jessybreyne" target="_blank">GitHub</a> et à vous connecter avec moi sur <a href="https://www.linkedin.com/in/jessy-breyne/" target="_blank">LinkedIn</a>.</p>
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Jessy Breyne</h1>
+    <p>Avec une expérience en tant que Développeur Web Full-Stack, je me consacre actuellement au développement
+      back-end chez Dassault Systèmes. Mon parcours m'a permis de maîtriser un éventail de technologies, et je
+      poursuis constamment l'apprentissage de nouveaux outils. Je vous invite à découvrir mes projets sur <a
+        href="https://github.com/jessybreyne" target="_blank">GitHub</a> et à vous connecter avec moi sur <a
+        href="https://www.linkedin.com/in/jessy-breyne/" target="_blank">LinkedIn</a>.</p>
 
-        <p>Je m'intéresse particulièrement à la philosophie, avec une prédilection pour le stoïcisme, le spinozisme, et les idées de Nietzsche. Les œuvres de Schopenhauer me fournissent également matière à réflexion. J'aime aussi découvrir des philosophes plus récents ou en explorer des moins connus.</p>
-    </section>
-    <section>
-       <p>Par ailleurs, je nourris une appréciation particulière pour les beaux stylos. Dans ma collection, j'ai notamment un <a href="https://bigidesign.com/collections/pens/products/slim-bolt-action-pen?variant=40394123640886" target="_blank">Slim Bolt Action Pen de Big I Design</a> et un <a href="https://wingback.co.uk/collections/mechanical-pen-special-edition/products/x-jan-perit-mechanical-pen-steel" target="_blank">stylo mécanique en édition spéciale de Wingback</a>. Ce qui m'attire particulièrement dans ces objets, c'est la précision et l'usinage, la capacité de réaliser un objet simple de multiples façons différentes. Cela me pousse à réfléchir sur comment nos objets du quotidien pourraient être réalisés différemment, ajoutant une dimension d'exploration et d'innovation dans l'usage quotidien des objets.</p>
-    </section>
-</main>
+    <p>Je m'intéresse particulièrement à la philosophie, avec une prédilection pour le stoïcisme, le spinozisme, et
+      les idées de Nietzsche. Les œuvres de Schopenhauer me fournissent également matière à réflexion. J'aime aussi
+      découvrir des philosophes plus récents ou en explorer des moins connus.</p>
+    <p>Par ailleurs, je nourris une appréciation particulière pour les beaux stylos. Dans ma collection, j'ai
+      notamment un <a
+        href="https://bigidesign.com/collections/pens/products/slim-bolt-action-pen?variant=40394123640886"
+        target="_blank">Slim Bolt Action Pen de Big I Design</a> et un <a
+        href="https://wingback.co.uk/collections/mechanical-pen-special-edition/products/x-jan-perit-mechanical-pen-steel"
+        target="_blank">stylo mécanique en édition spéciale de Wingback</a>. Ce qui m'attire particulièrement dans ces
+      objets, c'est la précision et l'usinage, la capacité de réaliser un objet simple de multiples façons
+      différentes. Cela me pousse à réfléchir sur comment nos objets du quotidien pourraient être réalisés
+      différemment, ajoutant une dimension d'exploration et d'innovation dans l'usage quotidien des objets.</p>
+  </main>
 
 
-  </body>
+</body>
+
 </html>
-
